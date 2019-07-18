@@ -1,0 +1,6 @@
+
+php artisan crud:generate Song --fields="artist_alias#text; artist#text; song#text; song_alias#text; artist_song#text" --view-path=admin --controller-namespace=Admin --route-group=admin
+
+php artisan crud:generate Sales --fields="name_sales#varchar" --view-path=admin --controller-namespace=Admin --route-group=admin
+
+php artisan crud:generate Prospect --fields="name#varchar; sales_id#int; date_assign#varchar; note#text; status#int" --view-path=admin --controller-namespace=Admin --route-group=admin

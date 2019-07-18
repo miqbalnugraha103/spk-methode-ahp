@@ -1,0 +1,8 @@
+<div class="form-group form-float{{ $errors->has('%1$s') ? 'has-error' : ''}}">
+    <div class="form-line">
+        %3$s
+        {!! Form::label('%1$s', %2$s, ['class' => 'form-label']) !!}
+    </div>
+    {!! $errors->first('%1$s', '<p class="help-block">:message</p>') !!}
+</div>
+<br>

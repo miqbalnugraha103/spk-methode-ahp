@@ -1,0 +1,7 @@
+%%formFieldsHtml%%
+
+<br>
+<div class="form-group">
+    {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Create', ['class' => 'btn bg-green waves-effect']) !!}
+    <input type="reset" value="Clear" class="btn bg-grey waves-effect">
+</div>
