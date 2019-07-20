@@ -65,18 +65,9 @@
                 <img src="{{ url('/') }}/images/user.png" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
-                <a href="{{ url('/admin/logout') }}" class="btn bg-blue waves-effect" title="Keluar">
-                    <i class="fa fa-exit" aria-hidden="true"></i> Keluar
-                </a>
-                {{-- <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</div> --}}
-                {{-- <div class="email">{{ Auth::user()->email }}</div> --}}
-                {{-- <div class="btn-group user-helper-dropdown">
-                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a href="{{ url('/admin/profile') }}"><i class="material-icons">person</i>Profile</a></li>
-                        <li><a href="{{ url('/admin/logout') }}"><i class="material-icons">input</i>Log Out</a></li>
-                    </ul>
-                </div> --}}
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</div>
+                <div class="email">{{ Auth::user()->email }}</div>
+                
             </div>
         </div>
         <!-- #User Info -->
