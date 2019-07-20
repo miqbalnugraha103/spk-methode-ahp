@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CRM AJD') }}</title>
+    <title>{{ config('app.name', 'SPK AHP') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -35,8 +35,8 @@
 <body class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);"><b>CRM - AJD</b></a>
-            <small>Login Admin</small>
+            <a href="javascript:void(0);"><b>Login Sistem</b></a>
+            <small>AHP (Analityc Hierarchy Process).</small>
         </div>
         @yield('content')
     </div>

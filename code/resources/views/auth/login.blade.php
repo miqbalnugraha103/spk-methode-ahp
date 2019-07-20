@@ -5,7 +5,7 @@
         <div class="body">
             <form id="sign_in" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <div class="msg">Sign in to start your session</div>
+                <div class="msg">Sistem Pendukung Keputusan Metode AHP</div>
                 <div class="input-group{{ $errors->has('usernameOrEmail') ? ' has-error' : '' }}">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>

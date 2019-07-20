@@ -1,12 +1,12 @@
 @extends('layouts.admin.frame')
 
-@section('title', 'Daftar Seleksi')
+@section('title', 'Daftar Kriteria Setiap Seleksi')
 
 @section('content')
 
     <ol class="breadcrumb breadcrumb-col-deep-purple">
         <li><a href="{{ url('/home') }}">Home</a></li>
-        <li class="active">Daftar Seleksi</li>
+        <li class="active">Daftar Kriteria Setiap Seleksi</li>
     </ol>
 
     <div class="container-fluid">
@@ -16,32 +16,54 @@
                     <div class="header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-12">
-                                <h2>Daftar Seleksi <span class="pull-right"><a href="{{ url('/seleksi/tambah') }}" class="btn bg-green waves-effect" title="Add New Color">
+                                <h2>Daftar Kriteria Setiap Seleksi <span class="pull-right"><a href="{{ url('/kriteria-seleksi/tambah') }}" class="btn bg-green waves-effect" title="Add New Color">
                                   <i class="fa fa-plus" aria-hidden="true"></i> Tambah Data</a></span>
                                 </h2>
                             </div>
                         </div>
                     </div>
                     <div class="body">
+                        <h2 class="card-inside-title">Seleksi :</h2>
+                        <select class="form-control show-tick" tabindex="-98">
+                            <option value="">2015 - Seleksi Bagian Marketing</option>
+                        </select>
+                        <br>
+                        <br>
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" id="color_table" width="100%">
+                            <table class="table table-bordered table-striped table-hover" id="colsor_table" width="100%">
                                 <thead>
                                     <tr>
                                         <th width="5%">#</th>
-                                        <th width="10%">Tahun</th>
-                                        <th width="30%">Seleksi (Nama Seleksi)</th>
-                                        <th width="35%">Catatan</th>
-                                        <th width="20%">Aksi</th>
+                                        <th width="80%">Nama Kriteria</th>
+                                        <th width="15%">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>2015</td>
-                                        <td>Seleksi Bagian Marketing</td>
-                                        <td>Penyeleksian Bagian Marketing Cabang Baru</td>
+                                        <td>Kejujuran</td>
                                         <td>
-                                            <a href="{{ url('/seleksi/edit') }}" class="btn bg-cyan btn-sm waves-effect"><i class="fa fa-pencil-square-o"></i> Ubah </a>
+                                            <a onclick="deleteData()" class="btn bg-red btn-sm waves-effect"><i class="fa fa-trash-o"></i> Hapus </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Daya tahan kerja</td>
+                                        <td>
+                                            <a onclick="deleteData()" class="btn bg-red btn-sm waves-effect"><i class="fa fa-trash-o"></i> Hapus </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Ketelitian</td>
+                                        <td>
+                                            <a onclick="deleteData()" class="btn bg-red btn-sm waves-effect"><i class="fa fa-trash-o"></i> Hapus </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Inisiatif</td>
+                                        <td>
                                             <a onclick="deleteData()" class="btn bg-red btn-sm waves-effect"><i class="fa fa-trash-o"></i> Hapus </a>
                                         </td>
                                     </tr>
@@ -74,7 +96,7 @@
                 if (isConfirm) {
                     $.ajax({
                         type: "POST",
-                        url: 'seleksi' + "/" + id + '?' + $.param({"_token" : '{{ csrf_token() }}' }),
+                        url: 'kriteria-seleksi' + "/" + id + '?' + $.param({"_token" : '{{ csrf_token() }}' }),
                         data: {_method: 'delete'},
                          complete: function (msg) {
                             oTable.draw();
